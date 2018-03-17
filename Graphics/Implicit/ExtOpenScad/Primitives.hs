@@ -10,7 +10,7 @@
 {-# LANGUAGE FlexibleContexts, ScopedTypeVariables #-}
 
 -- Export one set containing all of the primitive object's patern matches.
-module Graphics.Implicit.ExtOpenScad.Primitives (primitives) where
+module Graphics.Implicit.ExtOpenScad.Primitives (primitives, deg2rad) where
 
 import Prelude(String, IO, Char, Either(Left, Right), Bool(False), Maybe(Just, Nothing), Fractional, ($), return, either, id, (-), (==), (&&), (<), fromIntegral, (*), cos, sin, pi, (/), (>), const, uncurry, realToFrac, fmap, fromInteger, round, (/=), (||), not, null, map, (++), putStrLn)
 

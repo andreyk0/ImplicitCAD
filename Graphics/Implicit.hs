@@ -13,6 +13,7 @@
 
 module Graphics.Implicit(
     -- Operations
+    deg,
     translate,
     scale,
     complement, union, intersect, difference,
@@ -60,6 +61,7 @@ import Graphics.Implicit.Primitives (translate, scale, complement, union, inters
 
 -- The Extended OpenScad interpreter.
 import Graphics.Implicit.ExtOpenScad (runOpenscad)
+import Graphics.Implicit.ExtOpenScad.Primitives (deg2rad)
 
 -- Functions for writing files based on the result of operations on primitives.
 import qualified Graphics.Implicit.Export as Export (writeSVG, writeSTL, writeBinSTL, writeOBJ, writeSCAD2, writeSCAD3, writeTHREEJS, writeGCodeHacklabLaser, writePNG)
@@ -100,3 +102,5 @@ writePNG2 = Export.writePNG
 writePNG3 :: ℝ -> FilePath -> SymbolicObj3  -> IO ()
 writePNG3 = Export.writePNG
 
+deg:: ℝ -> ℝ
+deg = deg2rad
